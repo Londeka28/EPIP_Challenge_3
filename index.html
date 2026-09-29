@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Smart Response Network | Command Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🚨 Smart Emergency Dispatch System</h1>
+    <div id="status-indicator">System Status: <span id="conn-text">Connecting...</span></div>
+  </header>
+
+  <main class="dashboard-container">
+    <section class="sidebar">
+      <h2>Active Incidents</h2>
+      <div id="alerts-list">
+        <p class="empty-msg">No active emergencies detected.</p>
+      </div>
+    </section>
+
+    <section class="map-view">
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
